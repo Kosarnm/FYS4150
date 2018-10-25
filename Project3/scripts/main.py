@@ -82,16 +82,28 @@ def main():
 #    total = S.total_energy(p1,p2)
 #    --angular momentum
 #    angular_momentum = S.angular_momentum(p2,0.01,1E6)
+    
 #    --prehelion precsition
-#    p =[]
-#    xp_mercury,yp_mercury = S.prehelion_with_VV(p7,0.001,1E5)
-#    for i in range(0,int(1E5)):
-#         p.append(np.sqrt(xp_mercury[i]**2 + yp_mercury[i]**2))
-#    for i in range(0,len(p)):
-#         tan.append(6*np.pi * 4*np.pi**2/p[i]/365*174)
-##     tan = min_value_y/min_value_x
-#     time = np.linspace(0,100,len(p))
-#     plt.plot(time,tan) 
+    xp_mercury,yp_mercury = S.prehelion_with_VV(p2,0.001,1E5)
+
+    p = []
+    x_min = []
+    y_min = []
+    theta = []   
+    
+    for i in range(0,len(xp_mercury)):
+        
+        
+        p.append(np.sqrt(xp_mercury[i]**2 + yp_mercury[i]**2))
+        r_min = p[0]
+        r_new  = np.sqrt(xp_mercury[i]**2 + yp_mercury[i]**2)
+        if np.absolute(r_min - r_new) < 0.00001:
+            x_min.append(xp_mercury[i])
+            y_min.append(yp_mercury[i])
+            theta.append(np.arctan(np.abs(yp_mercury[i])/xp_mercury[i]))
+        
+    time = np.linspace(0,100,len(theta))
+    plt.plot(time,theta)
     
 main()
     
