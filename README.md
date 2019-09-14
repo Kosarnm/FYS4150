@@ -10,9 +10,9 @@ Implementation of the Jacobi rotation algorithm to solve eigenvalue problem for 
 
 ### Project 3 :
 
-In this project we build a flexible and easily expandable object oriented
-framework which we use to simulate the solar system. In order to calculate
-orbits of celestial bodies we implement the Euler-Cromer and the Velocity
+In this project I build a flexible and easily expandable object oriented
+framework which I use to simulate the solar system. In order to calculate
+orbits of celestial bodies I implement the Euler-Cromer and the Velocity
 Verlet numerical integration methods. The Verlet method proves superior.
 The model is expanded gradually from a two-body system to include all
 planets of the solar system.
@@ -26,4 +26,9 @@ a paramagnetic material. The aim is to solve the problem employing the
 Metropolis-Hastings algorithm and Monte Carlo methods.
 
 
-## Project 5 :
+### Project 5 :
+
+In this project I develop a Molecular Dynamics simulator to calculate the macroscopic quantity of melting
+temperature from a microscopic system, using periodic boundary conditions. A method is developed to place unit
+cells of an argon crystal in a lattice, iterate the system forward with the velocity verlet method and Lennard-Jones
+potential and gather statistics. 
